@@ -1,6 +1,6 @@
 install:
 		install -d $(DESTDIR)/etc/udev/rules.d
-		install -d $(DESTDIR)/use/local/bin
+		install -d $(DESTDIR)/usr/local/bin
 		install -d $(DESTDIR)/var/local
 		install -m 655 root/etc/udev/rules.d/ps3controller.rules $(DESTDIR)/etc/udev/rules.d/ps3controller.rules
 		install -m 655 root/etc/udev/rules.d/91-btremove.rules $(DESTDIR)/etc/udev/rules.d/91-btremove.rules
