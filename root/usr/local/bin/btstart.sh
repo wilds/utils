@@ -9,8 +9,8 @@ fi
 
 pidof bluetoothd > /dev/null 2>&1
 if [ $? != 0 ]; then
-        /etc/init.d/dbus restart 
-        /etc/init.d/bluetooth restart 
+        /usr/sbin/dbus-daemon 
+        /usr/bin/bluetoothd 
 #        sleep 1;
 fi
 
