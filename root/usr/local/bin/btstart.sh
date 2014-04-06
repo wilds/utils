@@ -9,8 +9,8 @@ fi
 
 pidof bluetoothd > /dev/null 2>&1
 if [ $? != 0 ]; then
-        /usr/sbin/dbus-daemon 
-        /usr/bin/bluetoothd 
+        /usr/bin/dbus-daemon 
+        /usr/sbin/bluetoothd 
 #        sleep 1;
 fi
 
