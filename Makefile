@@ -1,9 +1,12 @@
 install:
+		install -d $(DESTDIR)/etc/init.d
 		install -d $(DESTDIR)/etc/udev/rules.d
 		install -d $(DESTDIR)/usr/local/bin
 		install -d $(DESTDIR)/var/local
 		install -d $(DESTDIR)/etc/bluetooth
 		install -d $(DESTDIR)/var/run/dbus
+		install -m 655 root/etc/init.d/S40dbus $(DESTDIR)/etc/init.d/S40dbus
+		install -m 655 root/etc/bluetooth/main.conf $(DESTDIR)/etc/bluetooth/main.conf
 		install -m 655 root/etc/bluetooth/network.conf $(DESTDIR)/etc/bluetooth/network.conf
 		install -m 655 root/etc/udev/rules.d/ps3controller.rules $(DESTDIR)/etc/udev/rules.d/ps3controller.rules
 		install -m 655 root/etc/udev/rules.d/91-btremove.rules $(DESTDIR)/etc/udev/rules.d/91-btremove.rules
