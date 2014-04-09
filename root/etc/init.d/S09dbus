@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+
+mkdir -p /var/run/dbus
+dbus-daemon --system
+
+exit 0

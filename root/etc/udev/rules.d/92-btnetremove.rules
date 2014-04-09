@@ -1,0 +1,1 @@
+ACTION=="remove", KERNEL=="bnep0", RUN+="/usr/local/bin/udevrun.sh /usr/local/bin/btnetstop.sh"
