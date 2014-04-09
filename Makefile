@@ -11,6 +11,7 @@ install:
 		install -m 644 root/etc/init.d/S09dbus $(DESTDIR)/etc/init.d/S09dbus
 		install -m 644 root/etc/bluetooth/main.conf $(DESTDIR)/etc/bluetooth/main.conf
 		install -m 644 root/etc/bluetooth/network.conf $(DESTDIR)/etc/bluetooth/network.conf
+		install -m 644 root/etc/bluetooth/pin $(DESTDIR)/etc/bluetooth/pin
 		install -m 644 root/etc/udev/rules.d/ps3controller.rules $(DESTDIR)/etc/udev/rules.d/ps3controller.rules
 		install -m 644 root/etc/udev/rules.d/91-btremove.rules $(DESTDIR)/etc/udev/rules.d/91-btremove.rules
 		install -m 644 root/etc/udev/rules.d/91-btadd.rules $(DESTDIR)/etc/udev/rules.d/91-btadd.rules
