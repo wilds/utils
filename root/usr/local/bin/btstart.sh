@@ -4,7 +4,9 @@ if [ $1 != 00:00:00:00:00:00 ]; then
        echo $1 > /var/local/last_btaddress
 fi 
 
-/usr/bin/sixad -s &
+#/usr/bin/sixad -s &
+/sbin/modprobe uinput
+/usr/sbin/sixad-bin 0 0 0
 
 /usr/sbin/bluetoothd 
 
