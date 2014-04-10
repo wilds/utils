@@ -6,7 +6,7 @@ fi
 
 #/usr/bin/sixad -s &
 /sbin/modprobe uinput
-/usr/sbin/sixad-bin 0 0 0
+/usr/sbin/sixad-bin 0 0 0 &
 
 /usr/sbin/bluetoothd 
 
