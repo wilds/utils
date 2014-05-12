@@ -2,7 +2,8 @@
 while [ 1 ]; do
 sleep 2;
 if [ -c /dev/input/js0 ]; then 
-	/controller
+	rm -rdf /var/log/flight*.log
+	/usr/local/bin/controller
 fi
 
 done

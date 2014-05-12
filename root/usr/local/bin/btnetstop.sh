@@ -1,6 +1,7 @@
 #!/bin/sh
-/etc/init.d/manual/S13portman stop            
 /etc/init.d/manual/S60nfs stop
+/etc/init.d/manual/S40network stop
+/etc/init.d/manual/S13portmap stop            
 killall dropbear
 killall dnsmasq
 route del -net 0.0.0.0 gw 10.0.1.2
