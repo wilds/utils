@@ -17,6 +17,6 @@ fi
 /usr/bin/bt-agent -d -p /etc/bluetooth/pin
 #END
 
-/usr/bin/pand --listen --role gn -M
+/usr/bin/pand --listen --role nap -M
 
 
