@@ -1,1 +1,2 @@
 /usr/local/bin/controller.sh &
+/usr/local/bin/avr.sh &

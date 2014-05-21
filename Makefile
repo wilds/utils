@@ -7,6 +7,7 @@ install:
 		install -d $(DESTDIR)/var/local
 		install -d $(DESTDIR)/etc/bluetooth
 		install -d $(DESTDIR)/etc/dropbear
+		install -d $(DESTDIR)/avr
 		install -m 644 root/etc/group $(DESTDIR)/etc/group
 		install -m 644 root/etc/exports $(DESTDIR)/etc/exports
 		install -m 644 root/etc/bluetooth/main.conf $(DESTDIR)/etc/bluetooth/main.conf
@@ -27,6 +28,8 @@ install:
 		install -m 755 root/usr/local/bin/btstart.sh $(DESTDIR)/usr/local/bin/btstart.sh
 		install -m 755 root/usr/local/bin/btstop.sh $(DESTDIR)/usr/local/bin/btstop.sh
 		install -m 755 root/usr/local/bin/controller.sh $(DESTDIR)/usr/local/bin/controller.sh
+		install -m 755 root/usr/local/bin/avr.sh $(DESTDIR)/usr/local/bin/avr.sh
 		mkdir -p $(DESTDIR)/etc/dropbear
 		mkdir -p $(DESTDIR)/var/local
+		mkdir -p $(DESTDIR)/avr
 
