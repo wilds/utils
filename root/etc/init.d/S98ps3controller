@@ -1,1 +1,5 @@
+#!/bin/sh
+if [ "$1" == "start"  ]; then
 /usr/local/bin/sixpair.sh
+fi
+exit 0;

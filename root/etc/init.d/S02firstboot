@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+
+if [ "$1" == "start"  ]; then
+
+if [ -f "/secondboot" ]; then
+	rm /secondboot
+	/usr/sbin/mkfs.ext2 /dev/mmcblk0p3
+	mkdir /rpicopter
+	echo "/dev/mmcblk0p3       /rpicopter              ext2	sync,rw,noauto         0      0" >> /etc/fstab
+	sync;sync;/sbin/reboot;
+fi
+
+if [ -f "/firstboot" ]; then
+	rm /firstboot
+	(echo n;echo p;echo 3;echo ;echo ;echo w;) | /sbin/fdisk /dev/mmcblk0
+	touch /secondboot
+	sync;sync;/sbin/reboot;
+fi
+
+
+fi
+
+exit 0

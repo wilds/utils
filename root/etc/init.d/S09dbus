@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-
+if [ "$1" == "start"  ]; then
 mkdir -p /var/run/dbus
 dbus-daemon --system
-
+fi
 exit 0

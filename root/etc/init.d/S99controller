@@ -1,2 +1,7 @@
+#!/bin/sh
+if [ "$1" == "start"  ]; then
+mount /rpicopter
 /usr/local/bin/controller.sh &
 /usr/local/bin/avr.sh &
+fi
+exit 0;
