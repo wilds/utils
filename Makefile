@@ -23,6 +23,7 @@ install:
 		install -m 644 root/etc/udev/rules.d/92-btnetremove.rules $(DESTDIR)/etc/udev/rules.d/92-btnetremove.rules
 		install -m 755 root/etc/init.d/S02firstboot $(DESTDIR)/etc/init.d/S02firstboot
 		install -m 755 root/etc/init.d/S09dbus $(DESTDIR)/etc/init.d/S09dbus
+		install -m 755 root/etc/init.d/S10udev $(DESTDIR)/etc/init.d/S10udev
 		install -m 755 root/etc/init.d/S90i2c $(DESTDIR)/etc/init.d/S90i2c
 		install -m 755 root/etc/init.d/S98ps3controller $(DESTDIR)/etc/init.d/S98ps3controller
 		install -m 755 root/etc/init.d/S99controller $(DESTDIR)/etc/init.d/S99controller
