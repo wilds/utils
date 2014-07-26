@@ -23,14 +23,8 @@ $c[7][2] = $_POST['syp'];
 $c[7][3] = $_POST['syi'];
 $c[7][4] = $_POST['syd'];
 
-$handle = fopen("/var/local/rpicopter.config", "w");
-for ($i=0;$i<13;$i++) {
-    for ($j=0;$j<count($c[$i]);$j++) 
-        fprintf($handle,"%s\t",$c[$i][$j]);
-    fprintf($handle,"\n");
-}
+@include("save.php");
 
-fclose($handle);
 shell_exec("killall avrcontroller");
 
 header("Location: pid.php");

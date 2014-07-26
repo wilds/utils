@@ -11,10 +11,13 @@
 <form method="post" action="save_other.php">
 <input type="hidden" name="save" value="1"/>
 Log seq: <input type="text" name="log_seq" value="<?php echo $c[0][0]; ?>"/><br/>
+<p>0 - off<br/>
+1 - accel (x_max, y_max, z_max, x_min, y_min, z_min)<br/>
+2 - mpu (gyro x,y,z, y, p, r, yt) <br/>
+3 - motors (fl, bl, fr, br)<br/>
+4 - motors + quat<br/>
+5 - alt (alt, v_est, h_est)<br/>
 Log type: <input type="text" name="log_type" value="<?php echo $c[0][1]; ?>"/><br/><br/><br/>
-
-Motor min: <input type="text" name="motor_min" value="<?php echo $c[1][0]; ?>"/><br/>
-Motor max: <input type="text" name="motor_max" value="<?php echo $c[1][1]; ?>"/><br/><br/><br/>
 
 Rec Y0: <input type="text" name="rec0_y" value="<?php echo $c[2][0]; ?>"/><br/>
 Rec P0: <input type="text" name="rec0_p" value="<?php echo $c[2][1]; ?>"/><br/>
