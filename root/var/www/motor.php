@@ -13,12 +13,12 @@ Note: changed data needs to be saved before testing<br/><br/>
 <input type="hidden" name="save" value="1"/>
 Motor min (when throttle at 0%): <input type="text" name="motor_min" value="<?php echo $c[1][0]; ?>"/><br/>
 Motor max (when throttle at 100%): <input type="text" name="motor_max" value="<?php echo $c[1][1]; ?>"/><br/><br/><br/>
-Inflight threshold (just above min ESC value): <input type="text" name="inflight_threshold" value="<?php echo $c[1][2]; ?>"/><br/>
+Inflight threshold (please make sure that at this value the motors do spin): <input type="text" name="inflight_threshold" value="<?php echo $c[1][2]; ?>"/><br/>
 <p><b>Motor pins</b></p>
-Front-Left: <input type="text" name="fl" value="<?php echo $c[13][0]; ?>"/><br/>
-Back-Left: <input type="text" name="bl" value="<?php echo $c[13][1]; ?>"/><br/>
-Front-Right: <input type="text" name="fr" value="<?php echo $c[13][2]; ?>"/><br/>
-Back-Right: <input type="text" name="br" value="<?php echo $c[13][3]; ?>"/><br/>
+Front-Left: <input type="text" name="fl" value="<?php echo $c[14][0]; ?>"/><br/>
+Back-Left: <input type="text" name="bl" value="<?php echo $c[14][1]; ?>"/><br/>
+Front-Right: <input type="text" name="fr" value="<?php echo $c[14][2]; ?>"/><br/>
+Back-Right: <input type="text" name="br" value="<?php echo $c[14][3]; ?>"/><br/>
 
 <br/>
 
@@ -53,9 +53,4 @@ PWM width (us) <input type="text" name="pwm" value="<?php echo $c[1][0]; ?>"/>
 
 <pre>
 <?php
-readfile("/var/local/rpicopter.config");
-?>
-</pre>
-
-</body>
-</html>
+readfile("/var/local/rpicopter.config"

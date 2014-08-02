@@ -23,21 +23,4 @@ function csv_to_array($filename='', $delimiter=',')
 
 $c = csv_to_array($f,"\t");
 
-/*
-$handle = fopen($f, "r");
-array_push($c,fscanf($handle,"%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\t%s\t%s\n"));
-array_push($c,fscanf($handle,"%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n"));
-fclose($handle);
-*/
 ?>

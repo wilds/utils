@@ -5,7 +5,7 @@ ini_set('display_errors', True);
 
 if  (isset($_GET['attach']))  {
 	$m = $_GET['motor'];
-	$p = $c[13][$m];
+	$p = $c[14][$m];
 	$v = $m | $p << 4;
 	shell_exec('/usr/local/bin/avrspi -t 250 -v '.$v);
 }

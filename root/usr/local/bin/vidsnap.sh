@@ -1,4 +1,4 @@
 #!/bin/sh
 
-/usr/bin/raspivid -o video-$1.h264 -vf -hf -t 20000 -w 800 -h 600 &
+/usr/bin/raspivid -o /rpicopter/video-$1.h264 -vf -hf -w 1280 -h 720 -fps 25 -b 5000000 -t 30000 &
 

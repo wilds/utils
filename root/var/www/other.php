@@ -27,8 +27,17 @@ Rec P1: <input type="text" name="rec1_p" value="<?php echo $c[3][1]; ?>"/><br/>
 Rec R1: <input type="text" name="rec1_r" value="<?php echo $c[3][2]; ?>"/><br/><br/><br/>
 
 ALT_H PID: <input type="text" name="alt_h" value="<?php echo $c[10][2]; ?>"/><br/>
-ALT_V PID: <input type="text" name="alt_v" value="<?php echo $c[11][2]; ?>"/><br/><br/><br/>
-
+MAX: <input type="text" name="alt_h_max" value="<?php echo $c[10][0]; ?>"/>
+IMAX: <input type="text" name="alt_h_imax" value="<?php echo $c[10][1]; ?>"/>
+<br/><br/>
+ALT_V PID: <input type="text" name="alt_v" value="<?php echo $c[11][2]; ?>"/><br/>
+MAX: <input type="text" name="alt_v_max" value="<?php echo $c[11][0]; ?>"/>
+IMAX: <input type="text" name="alt_v_imax" value="<?php echo $c[11][1]; ?>"/>
+<br/><br/>
+MPU addr<br/>
+<input type="radio" name="mpu" value="0" <?php if ($c[15][0]==0) echo 'checked'; ?> >0x68</input><br/>
+<input type="radio" name="mpu" value="1" <?php if ($c[15][0]==1) echo 'checked'; ?> >0x69</input><br/>
+<br/>
 <input type="reset" value="Reset"/>
 <input type="submit" value="Submit"/><br/>
 </form>

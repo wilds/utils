@@ -1,19 +1,17 @@
 #!/bin/sh
-gnuplot <<- EOF
-	set term png size 2048, 1536
-	
-	set output "$2"
+arr=$(echo $1 | tr ";" "\n")
+for x in $arr 
+do
+    t=${x%%:*} 
+    v=${x#*:}
+    v1=${v%:*}
+    v2=${v#*:}
 
-	set yrange [-0.5:0.5]
-	set ytics 0.1
-	set grid ytics lt 0 lw 1 lc rgb "#bbbbbb"
+    case $t in
+	a) /usr/local/bin/avrspi -t 250 -v $(($v1 | $v2 << 4));;
+	m) /usr/local/bin/avrspi -t 251 -v $(($v1 | $v2 << 4));;
+	r) /usr/local/bin/avrspi -t 254 -v 0;;
+	s) sleep $v;;
+    esac
 
-	plot \
-		"$1" using 3 title 'max X' with lines \
-		,"$1" using 4 title 'max Y' with lines \
-		,"$1" using 5 title 'max Z' with lines \
-		,"$1" using 6 title 'min X' with lines \
-		,"$1" using 7 title 'min Y' with lines \
-		,"$1" using 8 title 'min Z' with lines
-EOF
-
+done
