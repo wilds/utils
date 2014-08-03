@@ -5,7 +5,7 @@ ini_set('display_errors', True);
 $f = $_GET['f'];
 $t = $_GET['t'];
 shell_exec('rm '.$log_path.'chart.png');
-shell_exec('sh /var/www/t'.$t.'chart.sh '.$log_path.$f.' '.$log_path.'chart.png');
+shell_exec('sh /var/www/shell/t'.$t.'chart.sh '.$log_path.$f.' '.$log_path.'chart.png');
 
 header('Content-type: image/png');
 

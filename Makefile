@@ -39,7 +39,8 @@ install:
 		install -m 755 root/usr/local/bin/vidsnap.sh $(DESTDIR)/usr/local/bin/vidsnap.sh
 		install -m 644 root/etc/lighttpd/modules.conf $(DESTDIR)/etc/lighttpd/modules.conf
 		install -m 644 root/etc/lighttpd/conf.d/fastcgi.conf $(DESTDIR)/etc/lighttpd/conf.d/fastcgi.conf
-		install -m 644 root/var/www/* $(DESTDIR)/var/www/
+		#install -m 644 root/var/www/* $(DESTDIR)/var/www/
+		cp -R root/var/www/* $(DESTDIR)/var/www/
 		install -m 644 root/firstboot $(DESTDIR)/firstboot
 		mkdir -p $(DESTDIR)/etc/dropbear
 		mkdir -p $(DESTDIR)/var/local

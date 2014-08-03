@@ -1,67 +1,31 @@
-<html>
-<head>
-<title>RPICopter - CAMERA</title>
-</head>
-<body>
-<a href="index.php">BACK</a><br/><br/>
 <?php
-
-@include("config.php");
-
-echo "<a href='delete_logs.php?f=*.jpg'> DELETE ALL IMAGES </a><br/><br/><br/><br/>";
-echo "<a href='delete_logs.php?f=*.h264'> DELETE ALL VIDEOS </a><br/><br/><br/><br/>";
-
-$c = [];
-$files = glob($log_path.'*.jpg');
-for ($i=0;$i<count($files);$i++) {
-	$fs = filesize($files[$i]);
-	$time = time() - filemtime($files[$i]);
-	array_push($c,array($time,$fs,basename($files[$i]),0));
-}
-
-$files = glob($log_path.'*.h264');
-for ($i=0;$i<count($files);$i++) {
-	$fs = filesize($files[$i]);
-	$time = time() - filemtime($files[$i]);
-	array_push($c,array($time,$fs,basename($files[$i]),1));
-}
-
-$files = glob($log_path.'*.mp4');
-for ($i=0;$i<count($files);$i++) {
-	$fs = filesize($files[$i]);
-	$time = time() - filemtime($files[$i]);
-	array_push($c,array($time,$fs,basename($files[$i]),2));
-}
-
-
-function cmp($a, $b) {
-	if ($a[0]<$b[0]) return -1;
-	if ($a[0]==$b[0]) return 0;
-	if ($a[0]>$b[0]) return 1;
-
-}
-
-usort($c, 'cmp');
-
-echo "<table>";
-for ($i=0;$i<count($c);$i++) {
-echo "<tr>";
-echo "<td style='padding-right: 25px'>";
-if ($c[$i][3] == '0')
-	echo "<a href='displayjpg.php?f=".$c[$i][2]."'>  ".$c[$i][2]." T:". $c[$i][0]." S:".$c[$i][1]."  </a><br/><br/>";
-if ($c[$i][3] == '1')
-	echo "<a href='displayh264.php?f=".$c[$i][2]."'>  ".$c[$i][2]." T:". $c[$i][0]." S:".$c[$i][1]."  </a><br/><br/>";
-if ($c[$i][3] == '2')
-	echo "<a href='displaymp4.php?f=".$c[$i][2]."'>  ".$c[$i][2]." T:". $c[$i][0]." S:".$c[$i][1]."  </a><br/><br/>";
-echo "</td>";
-echo "<td>";
-	echo "<a href='delete_logs.php?f=".$c[$i][2]."'> DELETE ".$c[$i][2]."  </a><br/><br/>";
-echo "</td>";
-
-echo "</tr>";
-}
-echo "</table>";
+$page_id='camera';
 ?>
-</body>
-</html>
+  <div data-role="page" id="<?php echo $page_id; ?>">
+    <div data-role="header">
+      <a href="#mainmenu" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back</a>
+      <h1>Camera</h1>
+    </div>
 
+    <div role="main" class="ui-content">
+
+<div data-role="collapsible" data-collapsed="true">
+<h3>Settings</h3>
+<label for="cam_seq">Reset camera sequencing</label>
+<select name="cam_seq" id="cam_seq" data-role="slider">
+	<option value="no">No</option>
+	<option value="cam_reset">Reset</option>
+</select> 
+<input type="submit" value="Save"/>
+</div>
+    </div>
+
+<?php
+@include "cam_list.php";
+?>
+<br/><br/>
+      <a href="delete.php?f=cam&hash=<?php echo $page_id; ?>" data-ajax="false" class="ui-btn ui-corner-all ui-btn-inline">Delete media</a>
+
+
+
+  </div>

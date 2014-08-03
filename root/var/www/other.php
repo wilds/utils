@@ -1,52 +1,46 @@
-<html>
-<head>
-<title>RPICopter - OTHER</title>
-</head>
-<body>
-<a href="index.php">BACK</a><br/><br/>
 <?php
-@include("load.php");
+$page_id='other';
 ?>
+  <div data-role="page" id="<?php echo $page_id; ?>">
+    <div data-role="header">
+      <a href="#mainmenu" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back</a>
+      <h1>Other</h1>
+    </div>
 
-<form method="post" action="save_other.php">
-<input type="hidden" name="save" value="1"/>
-Log seq: <input type="text" name="log_seq" value="<?php echo $c[0][0]; ?>"/><br/>
-<p>0 - off<br/>
-1 - accel (x_max, y_max, z_max, x_min, y_min, z_min)<br/>
-2 - mpu (gyro x,y,z, y, p, r, yt) <br/>
-3 - motors (fl, bl, fr, br)<br/>
-4 - motors + quat<br/>
-5 - alt (alt, v_est, h_est)<br/>
-Log type: <input type="text" name="log_type" value="<?php echo $c[0][1]; ?>"/><br/><br/><br/>
+    <div role="main" class="ui-content">
 
-Rec Y0: <input type="text" name="rec0_y" value="<?php echo $c[2][0]; ?>"/><br/>
-Rec P0: <input type="text" name="rec0_p" value="<?php echo $c[2][1]; ?>"/><br/>
-Rec R0: <input type="text" name="rec0_r" value="<?php echo $c[2][2]; ?>"/><br/>
-Rec Y1: <input type="text" name="rec1_y" value="<?php echo $c[3][0]; ?>"/><br/>
-Rec P1: <input type="text" name="rec1_p" value="<?php echo $c[3][1]; ?>"/><br/>
-Rec R1: <input type="text" name="rec1_r" value="<?php echo $c[3][2]; ?>"/><br/><br/><br/>
+<div data-role="collapsible" data-collapsed="true">
+<h3>PS3 controller</h3>
+<p>This section defines max values that PS3 controller will feed into the program when requesting yaw, pitch and roll at 100%.
+<div class="ui-field-contain">
+  <label for="c2_0">Yaw - A:</label>
+  <input type="number" name="c2_0" id="c2_2" value="<?php echo $c[2][0];?>"/>
+  <label for="c2_1">Pitch - A:</label>
+  <input type="number" name="c2_1" id="c2_2" value="<?php echo $c[2][1];?>"/>
+  <label for="c2_2">Roll - A:</label>
+  <input type="number" name="c2_2" id="c2_2" value="<?php echo $c[2][2];?>"/>
+  <label for="c3_0">Yaw - B:</label>
+  <input type="number" name="c3_0" id="c3_2" value="<?php echo $c[3][0];?>"/>
+  <label for="c3_1">Pitch - B:</label>
+  <input type="number" name="c3_1" id="c3_2" value="<?php echo $c[3][1];?>"/>
+  <label for="c3_2">Roll - B:</label>
+  <input type="number" name="c3_2" id="c3_2" value="<?php echo $c[3][2];?>"/>
+</div>
+</div>
 
-ALT_H PID: <input type="text" name="alt_h" value="<?php echo $c[10][2]; ?>"/><br/>
-MAX: <input type="text" name="alt_h_max" value="<?php echo $c[10][0]; ?>"/>
-IMAX: <input type="text" name="alt_h_imax" value="<?php echo $c[10][1]; ?>"/>
-<br/><br/>
-ALT_V PID: <input type="text" name="alt_v" value="<?php echo $c[11][2]; ?>"/><br/>
-MAX: <input type="text" name="alt_v_max" value="<?php echo $c[11][0]; ?>"/>
-IMAX: <input type="text" name="alt_v_imax" value="<?php echo $c[11][1]; ?>"/>
-<br/><br/>
-MPU addr<br/>
-<input type="radio" name="mpu" value="0" <?php if ($c[15][0]==0) echo 'checked'; ?> >0x68</input><br/>
-<input type="radio" name="mpu" value="1" <?php if ($c[15][0]==1) echo 'checked'; ?> >0x69</input><br/>
-<br/>
-<input type="reset" value="Reset"/>
-<input type="submit" value="Submit"/><br/>
-</form>
+<div data-role="collapsible" data-collapsed="true">
+<h3>MPU Address</h3>
+<fieldset data-role="controlgroup">
+     	<input type="radio" name="c15_0" id="c15_0-0" value="0" <?php if ($c[15][0]==0) echo 'checked'; ?> />
+     	<label for="c15_0-0">0x68</label>
+   	<input type="radio" name="c15_0" id="c15_0-1" value="1" <?php if ($c[15][0]==1) echo 'checked'; ?>  />
+     	<label for="c15_0-1">0x69</label>
+</fieldset>
+</div>
 
-<pre>
-<?php
-readfile("/var/local/rpicopter.config");
-?>
-</pre>
+<input type="submit" value="Save"/>
+    </div>
 
-</body>
-</html>
+
+
+  </div>
