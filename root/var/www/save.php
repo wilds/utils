@@ -18,6 +18,7 @@ if ($_POST['cam_seq']=='cam_reset') $c[0][2] = 0;
 
 //Log
 if ($_POST['log_seq']=='log_reset') $c[0][0] = 0;
+$c[0][1] = $_POST['c0_1'];
 
 //Other
 $c[2][0] = $_POST['c2_0'];

@@ -14,7 +14,7 @@ $page_id='esc_test';
 	<div style="text-align: center;"><p>s:X - sleep X seconds</p></div>
 	<div style="text-align: center;"><p>a:X:Y - attach motor/esc X to pin Y</p></div>
 	<div style="text-align: center;"><p>p:X:Y - send PWM signal Y to motor X (0-4)</p></div>
-	<div style="text-align: center;"><p>Example: r;s:3;a:0:3;s:1;p:0:1000;s:1;p:1:1250;s:3;p:1:1000;</p></div>
+	<div style="text-align: center;"><p>Example: r;s:3;a:0:3;s:1;p:0:1000;s:2;p:0:1250;s:3;p:0:1000;</p></div>
 	<input type="text" name="cmd" id="cmd" value=""/>
 	<input type="submit" value="Test"/>
 	
