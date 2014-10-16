@@ -9,6 +9,7 @@ if [ -f "/secondboot" ]; then
 	/usr/sbin/mkfs.ext2 -q /dev/mmcblk0p3
 	mkdir /rpicopter
 	echo "/dev/mmcblk0p3       /rpicopter              ext2	async,rw,noauto         0      0" >> /etc/fstab
+	rm /var/run/messagebus.pid
 	echo "Second boot done!";
 	sync;sync;/sbin/reboot;
 fi
