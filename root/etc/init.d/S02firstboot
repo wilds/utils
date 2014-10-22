@@ -6,7 +6,7 @@ if [ "$1" == "start"  ]; then
 if [ -f "/secondboot" ]; then
 	echo "Second boot... ";
 	rm /secondboot
-	/usr/sbin/mkfs.ext2 -q /dev/mmcblk0p3
+	/usr/sbin/mkfs.ext2 -q -F /dev/mmcblk0p3
 	mkdir /rpicopter
 	echo "/dev/mmcblk0p3       /rpicopter              ext2	async,rw,noauto         0      0" >> /etc/fstab
 	rm /var/run/messagebus.pid
