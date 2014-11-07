@@ -1,4 +1,5 @@
 <?php
+$cmd = 'avrspi_cmd';
 error_reporting(E_ALL);
 ini_set('display_errors', True);
 
@@ -21,7 +22,6 @@ if ($data === NULL)
 $ret = '{';
 
 for ($i=0;$i<count($data);$i++) {
-	$cmd = '/home/kiwi/rpicopter/AvrMiniCopter/rpi/avrspi_cmd';
 	$strout = array();
 	unset($strout);
         $out = exec(sprintf("%s -t %s -v %s", $cmd, $data[$i]['t'], $data[$i]['v']),$strout,$retval);

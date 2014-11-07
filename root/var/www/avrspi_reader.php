@@ -1,6 +1,8 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', True);
+$prog = 'avrspi_buf';
+$cmd = $prog.' -a 127.0.0.1 -p 1030 -l 1031';
 if (!extension_loaded('sockets')) {
 	echo '{"error": "PHP socket extension is not loaded."}';
 	exit(0);
@@ -60,7 +62,7 @@ function readMsg($sock)
 
 function isRunning(){
     try{
-        $result = shell_exec("pidof avrspi_buf");
+        $result = shell_exec("pidof ".$prog);
         if( count(preg_split("/\n/", $result)) > 1){
             return true;
         }
@@ -70,7 +72,6 @@ function isRunning(){
 }
 
 if (!isRunning()) { 
-	$cmd = '/home/kiwi/rpicopter/AvrMiniCopter/rpi/avrspi_buf -a 127.0.0.1 -p 1030 -l 1031';
 	$outputfile = '/dev/null';
 	$out = exec(sprintf("%s > %s 2>&1 & echo $!", $cmd, $outputfile),$pidArr); 
 } 
