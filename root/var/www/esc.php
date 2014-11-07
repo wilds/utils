@@ -7,7 +7,6 @@
     <div role="main" class="ui-content">
 <a href="#esc_pwm" data-transition="slide" class="ui-btn ui-corner-all">ESC Max/Min</a>
 <a href="#esc_pin" data-transition="slide" class="ui-btn ui-corner-all">PWM Pins</a>
-<a href="#esc_test" data-transition="slide" class="ui-btn ui-corner-all">Test motors</a>
     </div>
 
 

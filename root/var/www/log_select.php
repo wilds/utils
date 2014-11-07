@@ -5,7 +5,7 @@ $t = $_GET['t'];
 ?>
   <div data-role="page" id="<?php echo $page_id; ?>">
     <div data-role="header">
-      <a href="#logs" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back</a>
+      <a href="index.php#logs" data-ajax="false" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back</a>
       <h1><?php echo $f; ?></h1>
     </div>
 

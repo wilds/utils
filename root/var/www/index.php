@@ -29,13 +29,14 @@ session_start();
       <h1>Main menu</h1>
     </div>
     <div role="main" class="ui-content">
-      <a href="#pid" data-transition="slide" class="ui-btn ui-corner-all">PIDs</a>
-      <a href="#esc" data-transition="slide" class="ui-btn ui-corner-all">ESC</a>
-      <a href="#other" data-transition="slide" class="ui-btn ui-corner-all">Other</a>
-      <a href="#logs" data-transition="slide" class="ui-btn ui-corner-all">Logs</a>
-      <a href="#camera" data-transition="slide" class="ui-btn ui-corner-all">Camera</a>
+      <a data-ajax="false" href="#pid" data-transition="slide" class="ui-btn ui-corner-all">PIDs</a>
+      <a data-ajax="false" href="#esc" data-transition="slide" class="ui-btn ui-corner-all">ESC</a>
+      <a data-ajax="false" href="#other" data-transition="slide" class="ui-btn ui-corner-all">Other</a>
+      <a data-ajax="false" href="#logs" data-transition="slide" class="ui-btn ui-corner-all">Logs</a>
+      <a data-ajax="false" href="#camera" data-transition="slide" class="ui-btn ui-corner-all">Camera</a>
+      <a data-ajax="false" href="#debug" data-transition="slide" class="ui-btn ui-corner-all">Debug</a>
 <div data-role="collapsible" data-collapsed="true">
-<h3>Debug</h3>
+<h3>Config view</h3>
 <pre>
 <?php
 readfile("/var/local/rpicopter.config");
@@ -50,6 +51,7 @@ readfile("/var/local/rpicopter.config");
 @include "other.php";
 @include "log.php";
 @include "camera.php";
+@include "debug.php";
 ?>
 </form>
 </body>

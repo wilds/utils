@@ -15,6 +15,8 @@ if ($f=='cam') {
 	array_map( 'unlink', glob($mask) );
 	$mask = $log_path.'*.h264';
 	array_map( 'unlink', glob($mask) );
+	$mask = $log_path.'*.mp4';
+	array_map( 'unlink', glob($mask) );
 }
 header('Location: '.$_SERVER['HTTP_REFERER'].'#'.$_GET['hash']);
 ?>

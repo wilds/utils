@@ -3,7 +3,7 @@ $page_id='logs';
 ?>
   <div data-role="page" id="<?php echo $page_id; ?>">
     <div data-role="header">
-      <a href="#mainmenu" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back</a>
+      <a href="index.php#mainmenu" data-ajax="false" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back</a>
       <h1>Logs</h1>
     </div>
 
@@ -27,6 +27,8 @@ $page_id='logs';
      	<label for="c0_1-3">ESC PWM input (calculated)</label>
    	<input type="radio" name="c0_1" id="c0_1-4" value="4" <?php if ($c[0][1]==4) echo 'checked'; ?>  />
      	<label for="c0_1-4">ESC PWM input + quaternions</label>
+   	<input type="radio" name="c0_1" id="c0_1-5" value="5" <?php if ($c[0][1]==5) echo 'checked'; ?>  />
+     	<label for="c0_1-5">Altitude hold</label>
    	<input type="radio" name="c0_1" id="c0_1-99" value="99" <?php if ($c[0][1]==99) echo 'checked'; ?>  />
      	<label for="c0_1-99">Dev</label>
 </fieldset>

@@ -9,8 +9,8 @@ $page_id='pid_rate';
 
     <div role="main" class="ui-content">
 <div class="ui-field-contain">
-  <label for="c12_0">Acro_P:</label>
-  <input type="number" name="c12_0" id="c12_0" value="<?php echo $c[12][0];?>"/>
+  <label for="c13_0">Acro_P:</label>
+  <input type="number" name="c13_0" id="c13_0" value="<?php echo $c[13][0];?>"/>
 </div>
 <div data-role="collapsible" data-collapsed="false">
 <h3>Roll / Pitch</h3>

@@ -31,10 +31,10 @@ $page_id='other';
 <div data-role="collapsible" data-collapsed="true">
 <h3>MPU Address</h3>
 <fieldset data-role="controlgroup">
-     	<input type="radio" name="c15_0" id="c15_0-0" value="0" <?php if ($c[15][0]==0) echo 'checked'; ?> />
-     	<label for="c15_0-0">0x68</label>
-   	<input type="radio" name="c15_0" id="c15_0-1" value="1" <?php if ($c[15][0]==1) echo 'checked'; ?>  />
-     	<label for="c15_0-1">0x69</label>
+     	<input type="radio" name="c16_0" id="c16_0-0" value="0" <?php if ($c[16][0]==0) echo 'checked'; ?> />
+     	<label for="c16_0-0">0x68</label>
+   	<input type="radio" name="c16_0" id="c16_0-1" value="1" <?php if ($c[16][0]==1) echo 'checked'; ?>  />
+     	<label for="c16_0-1">0x69</label>
 </fieldset>
 </div>
 
