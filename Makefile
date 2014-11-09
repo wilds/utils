@@ -12,6 +12,7 @@ install:
 		install -d $(DESTDIR)/avr
 		install -d $(DESTDIR)/var/www
 		install -d $(DESTDIR)/
+		install -m 644 root/etc/php.ini $(DESTDIR)/etc/php.ini
 		install -m 644 root/etc/group $(DESTDIR)/etc/group
 		install -m 644 root/etc/exports $(DESTDIR)/etc/exports
 		install -m 644 root/etc/bluetooth/main.conf $(DESTDIR)/etc/bluetooth/main.conf

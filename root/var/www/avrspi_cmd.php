@@ -1,5 +1,5 @@
 <?php
-$cmd = 'avrspi_cmd';
+$cmd = '/usr/local/bin/avrspi_cmd';
 error_reporting(E_ALL);
 ini_set('display_errors', True);
 

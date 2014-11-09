@@ -14,6 +14,7 @@ function csv_to_array($filename='', $delimiter=',')
     {
         while (($row = fgetcsv($handle, 1000, $delimiter)) !== FALSE)
         {
+		if ($row[count($row)-1]=="") array_pop($row);
 		array_push($data,$row);
         }
         fclose($handle);

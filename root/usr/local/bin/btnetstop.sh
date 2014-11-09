@@ -1,6 +1,5 @@
 #!/bin/sh
 /etc/init.d/manual/S60nfs stop
-/etc/init.d/manual/S40network stop
 /etc/init.d/manual/S13portmap stop            
 killall lighttpd
 killall dropbear

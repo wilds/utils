@@ -40,6 +40,7 @@ var buf_lines = 0;
 var pause = 0;
 var pause_x = 0;
 var filter = [];
+var connected = 0;
 
 function isInt(value) {
 
@@ -73,7 +74,9 @@ $( "#sendCmd" ).click(function(){
 		c = c.split("\n");
 		//validate
 		for (var i=0;i<c.length;i++) {
-			var tmp = c[i].trim().replace(/\s+/g, ' ').split(' ');
+			var tmp = c[i].trim().replace(/\s+/g, ' ')
+			if (tmp=='') continue;
+			tmp = tmp.split(' ');
 			if ((typeof tmp[0] == 'undefined') || (typeof tmp[1] == 'undefined')) {
 				statusDiv.text("Error parsing line: "+i);
 				setTimeout(clearStatus,3000);
@@ -154,10 +157,20 @@ function refreshDebugView() {
 	$.getJSON( "avrspi_reader.php", function( data ) {
 		var d = data.data;
 		if (typeof data.error != 'undefined') {
+			if (connected == 1) {
+				addLineToDebug('Disconnected.');
+				connected = 0;
+			}
 			addLineToDebug(data.error+"\n");
 		}	
-		if (typeof d != 'undefined') for (var i=0;i<d.length;i++) {
-			addToDebug(0,d[i].t,d[i].v);
+		if (typeof d != 'undefined') { 
+			if (connected == 0) { 
+				addLineToDebug('Connected.');
+				connected = 1;
+			}
+			for (var i=0;i<d.length;i++) {
+				addToDebug(0,d[i].t,d[i].v);
+			}
 		}
 	});
 

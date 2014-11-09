@@ -1,8 +1,12 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', True);
-$prog = 'avrspi_buf';
-$cmd = $prog.' -a 127.0.0.1 -p 1030 -l 1031';
+$pidof = '/bin/pidof';
+$buf_prog = 'avrspi_buf';
+$buf_cmd = '/usr/local/bin/'.$buf_prog;
+$cmd = $buf_cmd.' -a 127.0.0.1 -p 1030 -l 1031';
+$out = "";
+$outputfile = "/tmp/avrspi_buf_php.log";
 if (!extension_loaded('sockets')) {
 	echo '{"error": "PHP socket extension is not loaded."}';
 	exit(0);
@@ -61,18 +65,28 @@ function readMsg($sock)
 }
 
 function isRunning(){
+    global $buf_prog;
+    global $pidof;
     try{
-        $result = shell_exec("pidof ".$prog);
-        if( count(preg_split("/\n/", $result)) > 1){
+	$c = sprintf("%s %s",$pidof,$buf_prog);
+        $result = shell_exec($c);
+        $lines = count(preg_split("/\n/", $result)); 
+
+	if ($lines>1) {
             return true;
         }
-    }catch(Exception $e){}
+    }catch(Exception $e){
+	echo '{"error": "Couldn\'t run pidof"}';
+	exit(0);
+    }
 
     return false;
 }
 
 if (!isRunning()) { 
-	$outputfile = '/dev/null';
+	global $cmd;
+	global $out;
+	global $outputfile;
 	$out = exec(sprintf("%s > %s 2>&1 & echo $!", $cmd, $outputfile),$pidArr); 
 } 
 

@@ -9,10 +9,15 @@ Config:
 70-224		- PID configurations
 
 Debug:
+249 [v]		- AVR ping; sends back the same message
 250-253 [pwm]	- feed PWM to motor (front-left, back-left, front-right, back-right); motor needs to be initialized
+		  Note: this is intended to work when AVR status is 1
 254 [motor]	- init motor (0-FL, 1-BL, 2-FR, 3-BR); motor pin needs to be provided before
+		  Note: this is intended to work when AVR status is 1
 255 0		- get AVR status
-255 2		- get AVR number of SPI crc errors 
+255 1		- get AVR number of SPI crc errors 
+255 2		- arm motors (status = 2); this should only be executed after configuration! (double check item 17 & 18)
+255 254		- dummy
 255 255		- reboot AVR
 
 Run:
@@ -24,6 +29,16 @@ Run:
 15 0/1		- engage/disengage altitude hold
 16 [val]	- change target altitude by [val] in cm
 
+Status reponses:
+0		- early init
+1		- awaiting config or command
+2		- arm motors
+3		- initialize mpu
+4		- calibrate gyro
+5		- running
+253		- loop execution failure - mpu error (mpu fifo full?)  
+254		- loop execution failure due to lag (avr is flooded with messages?) 
+255		- gyro calibration failed 
 
 
 Received values:

@@ -115,6 +115,16 @@ $c[14][6] = $_POST['c14_6'];
 $c[14][7] = $_POST['c14_7'];
 $c[14][8] = $_POST['c14_8'];
 
+
+for ($i=0;$i<count($c);$i++) {                    
+    for ($j=0;$j<count($c[$i]);$j++)       
+	if (is_numeric($c[$i][$j])==FALSE) {
+		echo $i." ".$j." ".$c[$i][$j]."\n";
+		die("Variable incorrect. Will NOT save.");
+		exit(0);
+	} 
+}
+
 $handle = fopen("/var/local/rpicopter.config", "w");
 for ($i=0;$i<count($c);$i++) {                    
     for ($j=0;$j<count($c[$i]);$j++)       
