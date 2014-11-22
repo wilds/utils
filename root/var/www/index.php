@@ -35,6 +35,8 @@ session_start();
       <a data-ajax="false" href="#logs" data-transition="slide" class="ui-btn ui-corner-all">Logs</a>
       <a data-ajax="false" href="#camera" data-transition="slide" class="ui-btn ui-corner-all">Camera</a>
       <a data-ajax="false" href="#debug" data-transition="slide" class="ui-btn ui-corner-all">Debug</a>
+      <a data-ajax="false" href="wsdebug.php" data-transition="slide" class="ui-btn ui-corner-all">WebSock Debug</a>
+      <a data-ajax="false" href="livechart.php" data-transition="slide" class="ui-btn ui-corner-all">Live Charts</a>
 <div data-role="collapsible" data-collapsed="true">
 <h3>Config view</h3>
 <pre>

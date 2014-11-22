@@ -22,15 +22,11 @@ $page_id='logs';
    	<input type="radio" name="c0_1" id="c0_1-1" value="1" <?php if ($c[0][1]==1) echo 'checked'; ?>  />
      	<label for="c0_1-1">Accelerometer</label>
    	<input type="radio" name="c0_1" id="c0_1-2" value="2" <?php if ($c[0][1]==2) echo 'checked'; ?>  />
-     	<label for="c0_1-2">MPU data (gyroscope + quaternions)</label>
+     	<label for="c0_1-2">Gyro + Motors</label>
    	<input type="radio" name="c0_1" id="c0_1-3" value="3" <?php if ($c[0][1]==3) echo 'checked'; ?>  />
-     	<label for="c0_1-3">ESC PWM input (calculated)</label>
+     	<label for="c0_1-3">Quaternions + Motors</label>
    	<input type="radio" name="c0_1" id="c0_1-4" value="4" <?php if ($c[0][1]==4) echo 'checked'; ?>  />
-     	<label for="c0_1-4">ESC PWM input + quaternions</label>
-   	<input type="radio" name="c0_1" id="c0_1-5" value="5" <?php if ($c[0][1]==5) echo 'checked'; ?>  />
-     	<label for="c0_1-5">Altitude hold</label>
-   	<input type="radio" name="c0_1" id="c0_1-99" value="99" <?php if ($c[0][1]==99) echo 'checked'; ?>  />
-     	<label for="c0_1-99">Dev</label>
+     	<label for="c0_1-4">Altitude</label>
 </fieldset>
 <input type="submit" value="Save"/>
 </div>
