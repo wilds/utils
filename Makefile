@@ -15,6 +15,7 @@ install:
 		install -m 644 root/etc/php.ini $(DESTDIR)/etc/php.ini
 		install -m 644 root/etc/group $(DESTDIR)/etc/group
 		install -m 644 root/etc/exports $(DESTDIR)/etc/exports
+		install -m 644 root/etc/wpa_supplicant.conf $(DESTDIR)/etc/wpa_supplicant.conf
 		install -m 644 root/etc/bluetooth/main.conf $(DESTDIR)/etc/bluetooth/main.conf
 		install -m 644 root/etc/bluetooth/network.conf $(DESTDIR)/etc/bluetooth/network.conf
 		install -m 644 root/etc/bluetooth/pin $(DESTDIR)/etc/bluetooth/pin
@@ -26,7 +27,6 @@ install:
 		install -m 755 root/etc/init.d/S09dbus $(DESTDIR)/etc/init.d/S09dbus
 		install -m 755 root/etc/init.d/S10udev $(DESTDIR)/etc/init.d/S10udev
 		install -m 755 root/etc/init.d/S90i2c $(DESTDIR)/etc/init.d/S90i2c
-		install -m 755 root/etc/init.d/S98ps3controller $(DESTDIR)/etc/init.d/S98ps3controller
 		install -m 755 root/etc/init.d/S99controller $(DESTDIR)/etc/init.d/S99controller
 		install -m 755 root/usr/local/bin/udevrun.sh $(DESTDIR)/usr/local/bin/udevrun.sh
 		install -m 755 root/usr/local/bin/sixpair.sh $(DESTDIR)/usr/local/bin/sixpair.sh
@@ -38,6 +38,7 @@ install:
 		install -m 755 root/usr/local/bin/avr.sh $(DESTDIR)/usr/local/bin/avr.sh
 		install -m 755 root/usr/local/bin/picsnap.sh $(DESTDIR)/usr/local/bin/picsnap.sh
 		install -m 755 root/usr/local/bin/vidsnap.sh $(DESTDIR)/usr/local/bin/vidsnap.sh
+		install -m 755 root/usr/local/bin/wifi.sh $(DESTDIR)/usr/local/bin/wifi.sh
 		install -m 644 root/etc/lighttpd/modules.conf $(DESTDIR)/etc/lighttpd/modules.conf
 		install -m 644 root/etc/lighttpd/conf.d/fastcgi.conf $(DESTDIR)/etc/lighttpd/conf.d/fastcgi.conf
 		install -m 644 root/var/local/rpicopter.config $(DESTDIR)/var/local/rpicopter.config
