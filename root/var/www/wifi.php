@@ -53,6 +53,7 @@ wifi.sh:
 </div>
 <button style="width: 150px; margin: auto" id="sendWIFI">Save</button>
 <div style="width: 150px; margin: auto" id="status">
+<button style="width: 150px; margin: auto" id="reboot">Reboot</button>
 </div>
 
 <script>
@@ -60,6 +61,20 @@ var statusDiv = $("div#status");
 function clearStatus() {
 	statusDiv.text("");
 }
+$( "#reboot" ).click(function(){
+	$.ajax({
+    url: 'reboot.php',
+    type: 'POST',
+    data: { },
+    success: function(result) {
+	statusDiv.text("Rebooting...");
+    },
+    error: function(result) {
+	statusDiv.text("Error rebooting!");
+    }
+});
+	return false;
+});
 
 $( "#sendWIFI" ).click(function(){
 	var wpas = $("textarea#wpas").val();
