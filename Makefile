@@ -21,7 +21,6 @@ install:
 		install -m 644 root/etc/bluetooth/network.conf $(DESTDIR)/etc/bluetooth/network.conf
 		install -m 644 root/etc/bluetooth/pin $(DESTDIR)/etc/bluetooth/pin
 		install -m 755 root/etc/init.d/S02firstboot $(DESTDIR)/etc/init.d/S02firstboot
-		install -m 755 root/etc/init.d/S09dbus $(DESTDIR)/etc/init.d/S09dbus
 		install -m 755 root/etc/init.d/S11modules $(DESTDIR)/etc/init.d/S11modules
 		install -m 755 root/etc/init.d/S99controller $(DESTDIR)/etc/init.d/S99controller
 		install -m 755 root/usr/local/bin/mdev-debug.sh $(DESTDIR)/usr/local/bin/mdev-debug.sh
