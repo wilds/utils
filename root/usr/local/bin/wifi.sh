@@ -2,6 +2,16 @@
 #!/bin/ash
 # RPi Network Conf Bootstrapper
  
+ERROR=$(ifconfig wlan0 2>&1 >/dev/null)
+ERROR=`echo $ERROR | grep error`;
+if [ "$ERROR" != "" ]; then
+        echo "$ERROR"
+        echo "WIFI device not found."
+        exit 0;
+fi
+
+echo "Found WIFI device"
+
 createAdHocNetwork(){
     echo "Creating ad-hoc network"
     ifconfig wlan0 down

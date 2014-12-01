@@ -1,0 +1,2 @@
+ifind /sys -name modalias | xargs sort -u \
+   | xargs modprobe -a 2> /dev/null
