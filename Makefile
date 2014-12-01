@@ -26,7 +26,8 @@ install:
 		install -m 755 root/usr/local/bin/mdev-debug.sh $(DESTDIR)/usr/local/bin/mdev-debug.sh
 		install -m 755 root/usr/local/bin/sixpair.sh $(DESTDIR)/usr/local/bin/sixpair.sh
 		install -m 755 root/usr/local/bin/bt.sh $(DESTDIR)/usr/local/bin/bt.sh
-		install -m 755 root/usr/local/bin/btnet.sh $(DESTDIR)/usr/local/bin/btnet.sh
+		install -m 755 root/usr/local/bin/btnetup.sh $(DESTDIR)/usr/local/bin/btnetup.sh
+		install -m 755 root/usr/local/bin/btnetdown.sh $(DESTDIR)/usr/local/bin/btnetdown.sh
 		install -m 755 root/usr/local/bin/controller.sh $(DESTDIR)/usr/local/bin/controller.sh
 		install -m 755 root/usr/local/bin/avr.sh $(DESTDIR)/usr/local/bin/avr.sh
 		install -m 755 root/usr/local/bin/picsnap.sh $(DESTDIR)/usr/local/bin/picsnap.sh

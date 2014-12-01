@@ -18,5 +18,5 @@ if [ "$BTADDR" != "" ]; then
         /usr/bin/bt-agent -d -p /etc/bluetooth/pin
         #END
 
-        /usr/bin/pand --listen --role nap -M --devup /usr/local/bin/btnet.sh add --devdown /usr/local/bin/btnet.sh remove
+        /usr/bin/pand --listen --role nap -M --devup /usr/local/bin/btnetup.sh --devdown /usr/local/bin/btnetdown.sh
 fi
