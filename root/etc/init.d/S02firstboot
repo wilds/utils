@@ -3,12 +3,24 @@
 
 if [ "$1" == "start"  ]; then
 
+#https://developer.ridgerun.com/wiki/index.php/High_performance_SD_card_tuning_using_the_EXT4_file_system
+
+#echo 100 > /proc/sys/vm/dirty_writeback_centisecs 
+#echo 100 > /proc/sys/vm/dirty_expire_centisecs
+
 if [ -f "/secondboot" ]; then
 	echo "Second boot... ";
 	rm /secondboot
-	/usr/sbin/mkfs.ext2 -q -F /dev/mmcblk0p3
+#	/usr/sbin/mkfs.ext2 -q -F /dev/mmcblk0p3
+	mkfs.ext4 -q -F /dev/mmcblk0p3
+	tune2fs -o journal_data_writeback /dev/mmcblk0p3
+	tune2fs -O ^has_journal /dev/mmcblk0p3
+	e2fsck -f /dev/mmcblk0p3
+
 	mkdir /rpicopter
-	echo "/dev/mmcblk0p3       /rpicopter              ext2	async,rw,noauto         0      0" >> /etc/fstab
+#	echo "/dev/mmcblk0p3       /rpicopter              ext2	async,rw,noauto         0      0" >> /etc/fstab
+	
+	echo "/dev/mmcblk0p3       /rpicopter              ext4	noatime,nodiratime,data=writeback         0      0" >> /etc/fstab
 	rm /var/run/messagebus.pid
 	echo "Second boot done!";
 	sync;sync;/sbin/reboot;
