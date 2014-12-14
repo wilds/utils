@@ -29,6 +29,7 @@ install:
 		install -m 755 root/usr/local/bin/btnetup.sh $(DESTDIR)/usr/local/bin/btnetup.sh
 		install -m 755 root/usr/local/bin/btnetdown.sh $(DESTDIR)/usr/local/bin/btnetdown.sh
 		install -m 755 root/usr/local/bin/controller.sh $(DESTDIR)/usr/local/bin/controller.sh
+		install -m 755 root/usr/local/bin/gst_streamer.sh $(DESTDIR)/usr/local/bin/gst_streamer.sh
 		install -m 755 root/usr/local/bin/avr.sh $(DESTDIR)/usr/local/bin/avr.sh
 		install -m 755 root/usr/local/bin/picsnap.sh $(DESTDIR)/usr/local/bin/picsnap.sh
 		install -m 755 root/usr/local/bin/vidsnap.sh $(DESTDIR)/usr/local/bin/vidsnap.sh

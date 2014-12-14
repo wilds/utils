@@ -1,0 +1,2 @@
+#!/bin/sh
+raspivid -t 0 -h 480 -w 640 -b 500000 -fps 30 -g 20 -n -awb off -drc off  -o - | gst-launch-1.0 -v fdsrc ! h264parse ! rtph264pay mtu=1470 config-interval=2 pt=96 ! gdppay ! udpsink port=5000 host=192.168.1.81
