@@ -3,8 +3,8 @@ Config:
 3 [mode]	- fly mode (0-stab, 1-acro)
 4 [gyro_o]	- gyro orientation; this is a single value that represent gyro orientation
 5-8 [pin]	- motor pin (front-left, back-left, front-right, back-right)
-17 [pwm]	- motor pwm value to feed when on standby
-18 [pwm]	- motor engage pwm threshold
+17 [pwm]	- standby throttle - this value will be fed to motors when on stadby
+18 [pwm]	- start throttle threshold - should be set to around 5% above standby throttle
 
 70-224		- PID configurations
 
