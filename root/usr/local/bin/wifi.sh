@@ -1,6 +1,8 @@
 # cat /usr/local/bin/wifi.sh 
 #!/bin/ash
 # RPi Network Conf Bootstrapper
+
+ssid="NETWORK_SSID"
  
 ERROR=$(ifconfig wlan0 2>&1 >/dev/null)
 ERROR=`echo $ERROR | grep error`;
@@ -27,7 +29,6 @@ echo "================================="
 echo "RPi Network Conf Bootstrapper 0.1"
 echo "================================="
 echo "Scanning for known WiFi networks"
-ssid="NETWORK_SSID"
 connected=false
 
 ifconfig wlan0 up

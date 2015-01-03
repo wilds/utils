@@ -8,7 +8,10 @@ mount /rpicopter
 
 /usr/local/bin/avrspi -d
 /usr/local/bin/avrbaro -b
+/usr/local/bin/avrping -d
+/usr/local/bin/camera_server -d
 /usr/local/bin/websockify -D 8888 127.0.0.1:1030
+/usr/local/bin/avrconfig.sh &
 /usr/local/bin/controller.sh &
 /usr/local/bin/avr.sh &
 fi

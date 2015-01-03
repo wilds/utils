@@ -52,8 +52,8 @@ wifi.sh:
 </div>
 </div>
 <button style="width: 150px; margin: auto" id="sendWIFI">Save</button>
-<div style="width: 150px; margin: auto" id="status">
 <button style="width: 150px; margin: auto" id="reboot">Reboot</button>
+<div style="width: 150px; margin: auto" id="status">
 </div>
 
 <script>
