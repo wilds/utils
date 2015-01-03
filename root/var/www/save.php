@@ -135,6 +135,7 @@ for ($i=0;$i<count($c);$i++) {
 fclose($handle); 
 
 
+shell_exec("killall avrconfig");
 shell_exec("killall avrcontroller");
 
 header('Location: '.$_SERVER['HTTP_REFERER'] . '#' . $_SESSION['hash']);
