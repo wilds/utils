@@ -12,7 +12,7 @@ mount /rpicopter
 /usr/local/bin/camera_server -d
 /usr/local/bin/websockify -D 8888 127.0.0.1:1030
 /usr/local/bin/avrconfig.sh &
-/usr/local/bin/controller.sh &
+/usr/local/bin/ps3controller.sh &
 /usr/local/bin/avr.sh &
 fi
 exit 0;

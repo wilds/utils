@@ -32,12 +32,10 @@ session_start();
       <a data-ajax="false" href="#pid" data-transition="slide" class="ui-btn ui-corner-all">PIDs</a>
       <a data-ajax="false" href="#esc" data-transition="slide" class="ui-btn ui-corner-all">ESC</a>
       <a data-ajax="false" href="#other" data-transition="slide" class="ui-btn ui-corner-all">Other</a>
-      <a data-ajax="false" href="#logs" data-transition="slide" class="ui-btn ui-corner-all">Logs</a>
-      <a data-ajax="false" href="#camera" data-transition="slide" class="ui-btn ui-corner-all">Camera</a>
-      <a data-ajax="false" href="#debug" data-transition="slide" class="ui-btn ui-corner-all">Debug</a>
       <a data-ajax="false" href="wsdebug.php" data-transition="slide" class="ui-btn ui-corner-all">WebSock Debug</a>
       <a data-ajax="false" href="livechart.php" data-transition="slide" class="ui-btn ui-corner-all">Live Charts</a>
       <a data-ajax="false" href="wifi.php" data-transition="slide" class="ui-btn ui-corner-all">Wifi Settings</a>
+      <a data-ajax="false" href="ps3config.php" data-transition="slide" class="ui-btn ui-corner-all">Bluetooth PS3</a>
 <div data-role="collapsible" data-collapsed="true">
 <h3>Config view</h3>
 <pre>
@@ -52,9 +50,6 @@ readfile("/var/local/rpicopter.config");
 @include "pid.php";
 @include "esc.php";
 @include "other.php";
-@include "log.php";
-@include "camera.php";
-@include "debug.php";
 ?>
 </form>
 </body>

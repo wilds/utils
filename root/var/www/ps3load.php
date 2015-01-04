@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', True);
-$f = '/var/local/rpicopter.config';
+$f = '/var/local/ps3.config';
 $c = [];
 
 function csv_to_array($filename='', $delimiter=',')
@@ -23,29 +23,5 @@ function csv_to_array($filename='', $delimiter=',')
 }
 
 $c = csv_to_array($f,"\t");
-
-$throttle = $c[0];
-
-$pidr_y = $c[1];
-$pidr_p = $c[2];
-$pidr_r = $c[3];
-
-$pids_y = $c[4];
-$pids_p = $c[5];
-$pids_r = $c[6];
-
-$pid_alt = $c[7];
-$pid_vz = $c[8];
-$pid_accel = $c[9];
-
-$acro_p = $c[10][0];
-
-$baro_f = $c[10][1];
-
-$gyro_orient = $c[11];
-
-$motor_pin = $c[12];
-
-$mpu_addr = $c[13][0];
 
 ?>

@@ -9,51 +9,51 @@ $page_id='pid_alt';
 
     <div role="main" class="ui-content">
 <p>WORK IN PROGRESS!</p>
-<label for="c13_1">Baro coefficient (0-1000) higher = baro less significant</label>
-<input type="number" name="c13_1" id="c13_1" value="<?php echo $c[13][1];?>"/>
+<label for="baro_f">Baro coefficient (0-1000) higher = baro less significant</label>
+<input type="number" name="baro_f" id="baro_f" value="<?php echo $baro_f;?>"/>
 <div data-role="collapsible" data-collapsed="false">
 <h3>Position (height)</h3>
 <div class="ui-field-contain">
-  <label for="c10_2">P:</label>
-  <input type="number" name="c10_2" id="c10_2" value="<?php echo $c[10][2];?>"/>
-  <label for="c10_3">I:</label>
-  <input type="number" name="c10_3" id="c10_3" value="<?php echo $c[10][3];?>"/>
-  <label for="c10_4">D:</label>
-  <input type="number" name="c10_4" id="c10_4" value="<?php echo $c[10][4];?>"/>
-  <label for="c10_0">Max value:</label>
-  <input type="number" name="c10_0" id="c10_0" value="<?php echo $c[10][0];?>"/>
-  <label for="c10_1">Max Ki term:</label>
-  <input type="number" name="c10_1" id="c10_1" value="<?php echo $c[10][1];?>"/>
+  <label for="pid_alt_2">P:</label>
+  <input type="number" name="pid_alt_2" id="pid_alt_2" value="<?php echo $pid_alt[2];?>"/>
+  <label for="pid_alt_3">I:</label>
+  <input type="number" name="pid_alt_3" id="pid_alt_3" value="<?php echo $pid_alt[3];?>"/>
+  <label for="pid_alt_4">D:</label>
+  <input type="number" name="pid_alt_4" id="pid_alt_4" value="<?php echo $pid_alt[4];?>"/>
+  <label for="pid_alt_0">Max value:</label>
+  <input type="number" name="pid_alt_0" id="pid_alt_0" value="<?php echo $pid_alt[0];?>"/>
+  <label for="pid_alt_1">Max Ki term:</label>
+  <input type="number" name="pid_alt_1" id="pid_alt_1" value="<?php echo $pid_alt[1];?>"/>
 </div>
 </div>
 <div data-role="collapsible" data-collapsed="false">
 <h3>Velocity</h3>
 <div class="ui-field-contain">
-  <label for="c11_2">P:</label>
-  <input type="number" name="c11_2" id="c11_2" value="<?php echo $c[11][2];?>"/>
-  <label for="c11_3">I:</label>
-  <input type="number" name="c11_3" id="c11_3" value="<?php echo $c[11][3];?>"/>
-  <label for="c11_4">D:</label>
-  <input type="number" name="c11_4" id="c11_4" value="<?php echo $c[11][4];?>"/>
-  <label for="c11_0">Max value:</label>
-  <input type="number" name="c11_0" id="c11_0" value="<?php echo $c[11][0];?>"/>
-  <label for="c11_1">Max Ki term:</label>
-  <input type="number" name="c11_1" id="c11_1" value="<?php echo $c[11][1];?>"/>
+  <label for="pid_vz_2">P:</label>
+  <input type="number" name="pid_vz_2" id="pid_vz_2" value="<?php echo $pid_vz[2];?>"/>
+  <label for="pid_vz_3">I:</label>
+  <input type="number" name="pid_vz_3" id="pid_vz_3" value="<?php echo $pid_vz[3];?>"/>
+  <label for="pid_vz_4">D:</label>
+  <input type="number" name="pid_vz_4" id="pid_vz_4" value="<?php echo $pid_vz[4];?>"/>
+  <label for="pid_vz_0">Max value:</label>
+  <input type="number" name="pid_vz_0" id="pid_vz_0" value="<?php echo $pid_vz[0];?>"/>
+  <label for="pid_vz_1">Max Ki term:</label>
+  <input type="number" name="pid_vz_1" id="pid_vz_1" value="<?php echo $pid_vz[1];?>"/>
 </div>
 </div>
 <div data-role="collapsible" data-collapsed="false">
 <h3>Acceleration</h3>
 <div class="ui-field-contain">
-  <label for="c12_2">P:</label>
-  <input type="number" name="c12_2" id="c12_2" value="<?php echo $c[12][2];?>"/>
-  <label for="c12_3">I:</label>
-  <input type="number" name="c12_3" id="c12_3" value="<?php echo $c[12][3];?>"/>
-  <label for="c12_4">D:</label>
-  <input type="number" name="c12_4" id="c12_4" value="<?php echo $c[12][4];?>"/>
-  <label for="c12_0">Max value:</label>
-  <input type="number" name="c12_0" id="c12_0" value="<?php echo $c[12][0];?>"/>
-  <label for="c12_1">Max Ki term:</label>
-  <input type="number" name="c12_1" id="c12_1" value="<?php echo $c[12][1];?>"/>
+  <label for="pid_accel_2">P:</label>
+  <input type="number" name="pid_accel_2" id="pid_accel_2" value="<?php echo $pid_accel[2];?>"/>
+  <label for="pid_accel_3">I:</label>
+  <input type="number" name="pid_accel_3" id="pid_accel_3" value="<?php echo $pid_accel[3];?>"/>
+  <label for="pid_accel_4">D:</label>
+  <input type="number" name="pid_accel_4" id="pid_accel_4" value="<?php echo $pid_accel[4];?>"/>
+  <label for="pid_accel_0">Max value:</label>
+  <input type="number" name="pid_accel_0" id="pid_accel_0" value="<?php echo $pid_accel[0];?>"/>
+  <label for="pid_accel_1">Max Ki term:</label>
+  <input type="number" name="pid_accel_1" id="pid_accel_1" value="<?php echo $pid_accel[1];?>"/>
 </div>
 </div>
 <input type="submit" value="Save"/>

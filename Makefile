@@ -28,7 +28,7 @@ install:
 		install -m 755 root/usr/local/bin/bt.sh $(DESTDIR)/usr/local/bin/bt.sh
 		install -m 755 root/usr/local/bin/btnetup.sh $(DESTDIR)/usr/local/bin/btnetup.sh
 		install -m 755 root/usr/local/bin/btnetdown.sh $(DESTDIR)/usr/local/bin/btnetdown.sh
-		install -m 755 root/usr/local/bin/controller.sh $(DESTDIR)/usr/local/bin/controller.sh
+		install -m 755 root/usr/local/bin/ps3controller.sh $(DESTDIR)/usr/local/bin/ps3controller.sh
 		install -m 755 root/usr/local/bin/avr.sh $(DESTDIR)/usr/local/bin/avr.sh
 		install -m 755 root/usr/local/bin/picsnap.sh $(DESTDIR)/usr/local/bin/picsnap.sh
 		install -m 755 root/usr/local/bin/vidsnap.sh $(DESTDIR)/usr/local/bin/vidsnap.sh
@@ -36,6 +36,7 @@ install:
 		install -m 644 root/etc/lighttpd/modules.conf $(DESTDIR)/etc/lighttpd/modules.conf
 		install -m 644 root/etc/lighttpd/conf.d/fastcgi.conf $(DESTDIR)/etc/lighttpd/conf.d/fastcgi.conf
 		install -m 644 root/var/local/rpicopter.config $(DESTDIR)/var/local/rpicopter.config
+		install -m 644 root/var/local/ps3.config $(DESTDIR)/var/local/ps3.config
 		cp -R root/var/www/* $(DESTDIR)/var/www/
 		install -m 644 root/firstboot $(DESTDIR)/firstboot
 		mkdir -p $(DESTDIR)/etc/dropbear

@@ -10,11 +10,9 @@ $page_id='esc_pwm';
     <div role="main" class="ui-content">
 <div class="ui-field-contain">
   <label for="name"><a href="#p_pwm_min" data-rel="popup">ESC min:</a></label>
-  <input type="number" name="c1_0" id="c1_0" value="<?php echo $c[1][0];?>"/>
-  <label for="name"><a href="#p_pwm_max" data-rel="popup">ESC max:</a></label>
-  <input type="number" name="c1_1" id="c1_1" value="<?php echo $c[1][1];?>"/>
+  <input type="number" name="throttle_0" id="throttle_0" value="<?php echo $throttle[0];?>"/>
   <label for="name"><a href="#p_inflight_threshold" data-rel="popup">Inflight threshold:</a></label>
-  <input type="number" name="c1_2" id="c1_2" value="<?php echo $c[1][2];?>"/>
+  <input type="number" name="throttle_1" id="throttle_1" value="<?php echo $throttle[1];?>"/>
 
 </div>
 <input type="submit" value="Save"/>
@@ -22,9 +20,6 @@ $page_id='esc_pwm';
 
 <div data-role="popup" id="p_pwm_min">
   <p>This is a PWM value that will be fed to ESCs when throttle is at 0%.</p>
-</div>
-<div data-role="popup" id="p_pwm_max">
-  <p>This is a PWM value that will be fed to ESCs when throttle is at 100%.</p>
 </div>
 <div data-role="popup" id="p_inflight_threshold">
   <p>At this PWM value the controller PIDs will be activated. Please ensure that your motors do spin at this value.</p>

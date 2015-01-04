@@ -9,38 +9,38 @@ $page_id='pid_rate';
 
     <div role="main" class="ui-content">
 <div class="ui-field-contain">
-  <label for="c13_0">Acro_P:</label>
-  <input type="number" name="c13_0" id="c13_0" value="<?php echo $c[13][0];?>"/>
+  <label for="acro_p">Acro_P:</label>
+  <input type="number" name="acro_p" id="acro_p" value="<?php echo $acro_p;?>"/>
 </div>
 <div data-role="collapsible" data-collapsed="false">
 <h3>Roll / Pitch</h3>
 <div class="ui-field-contain">
-  <label for="c5_2">P:</label>
-  <input type="number" name="c5_2" id="c5_2" value="<?php echo $c[5][2];?>"/>
-  <label for="c5_3">I:</label>
-  <input type="number" name="c5_3" id="c5_3" value="<?php echo $c[5][3];?>"/>
-  <label for="c5_4">D:</label>
-  <input type="number" name="c5_4" id="c5_4" value="<?php echo $c[5][4];?>"/>
-  <label for="c5_0"><a href="#p_pid_max" data-rel="popup">Max value:</a></label>
-  <input type="number" name="c5_0" id="c5_0" value="<?php echo $c[5][0];?>"/>
-  <label for="c5_1"><a href="#p_pid_imax" data-rel="popup">Max Ki term:</a></label>
-  <input type="number" name="c5_1" id="c5_1" value="<?php echo $c[5][1];?>"/>
+  <label for="pidr_p_2">P:</label>
+  <input type="number" name="pidr_p_2" id="pidr_p_2" value="<?php echo $pidr_p[2];?>"/>
+  <label for="pidr_p_3">I:</label>
+  <input type="number" name="pidr_p_3" id="pidr_p_3" value="<?php echo $pidr_p[3];?>"/>
+  <label for="pidr_p_4">D:</label>
+  <input type="number" name="pidr_p_4" id="pidr_p_4" value="<?php echo $pidr_p[4];?>"/>
+  <label for="pidr_p_0"><a href="#p_pid_max" data-rel="popup">Max value:</a></label>
+  <input type="number" name="pidr_p_0" id="pidr_p_0" value="<?php echo $pidr_p[0];?>"/>
+  <label for="pidr_p_1"><a href="#p_pid_imax" data-rel="popup">Max Ki term:</a></label>
+  <input type="number" name="pidr_p_1" id="pidr_p_1" value="<?php echo $pidr_p[1];?>"/>
 </div>
 <div style="text-align: center;"><p>For asymetric quadcopters please edit config file manually.</p></div>
 </div>
 <div data-role="collapsible" data-collapsed="false">
 <h3>Yaw</h3>
 <div class="ui-field-contain">
-  <label for="c4_2">P:</label>
-  <input type="number" name="c4_2" id="c4_2" value="<?php echo $c[4][2];?>"/>
-  <label for="c4_3">I:</label>
-  <input type="number" name="c4_3" id="c4_3" value="<?php echo $c[4][3];?>"/>
-  <label for="c4_4">D:</label>
-  <input type="number" name="c4_4" id="c4_4" value="<?php echo $c[4][4];?>"/>
-  <label for="c4_0"><a href="#p_pid_max" data-rel="popup">Max value:</a></label>
-  <input type="number" name="c4_0" id="c4_0" value="<?php echo $c[4][0];?>"/>
-  <label for="c4_1"><a href="#p_pid_imax" data-rel="popup">Max Ki term:</a></label>
-  <input type="number" name="c4_1" id="c4_1" value="<?php echo $c[4][1];?>"/>
+  <label for="pidr_y_2">P:</label>
+  <input type="number" name="pidr_y_2" id="pidr_y_2" value="<?php echo $pidr_y[2];?>"/>
+  <label for="pidr_y_3">I:</label>
+  <input type="number" name="pidr_y_3" id="pidr_y_3" value="<?php echo $pidr_y[3];?>"/>
+  <label for="pidr_y_4">D:</label>
+  <input type="number" name="pidr_y_4" id="pidr_y_4" value="<?php echo $pidr_y[4];?>"/>
+  <label for="pidr_y_0"><a href="#p_pid_max" data-rel="popup">Max value:</a></label>
+  <input type="number" name="pidr_y_0" id="pidr_y_0" value="<?php echo $pidr_y[0];?>"/>
+  <label for="pidr_y_1"><a href="#p_pid_imax" data-rel="popup">Max Ki term:</a></label>
+  <input type="number" name="pidr_y_1" id="pidr_y_1" value="<?php echo $pidr_y[1];?>"/>
 </div>
 </div>
 <input type="submit" value="Save"/>
