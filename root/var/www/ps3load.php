@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', True);
-$f = '/var/local/ps3.config';
+$f = '/rpicopter/ps3.config';
 $c = [];
 
 function csv_to_array($filename='', $delimiter=',')

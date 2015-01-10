@@ -1,4 +1,5 @@
 #!/bin/sh
+# ACCEL CHART
 gnuplot <<- EOF
 	set term png size 2048, 1536
 	
@@ -16,4 +17,3 @@ gnuplot <<- EOF
 		,"$1" using 7 title 'min Y' with lines \
 		,"$1" using 8 title 'min Z' with lines
 EOF
-

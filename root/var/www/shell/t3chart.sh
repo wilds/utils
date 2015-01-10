@@ -1,4 +1,5 @@
 #!/bin/sh
+#QUAT
 gnuplot <<- EOF
 	set term png size 2048, 1536
 	

@@ -3,21 +3,21 @@
 @include("config.php");
 
 $d = [];
-$files = glob($log_path.'*.jpg');
+$files = glob($cam_path.'*.jpg');
 for ($i=0;$i<count($files);$i++) {
         $fs = filesize($files[$i]);
         $time = time() - filemtime($files[$i]);
         array_push($d,array($time,$fs,basename($files[$i]),0));
 }
 
-$files = glob($log_path.'*.h264');
+$files = glob($cam_path.'*.h264');
 for ($i=0;$i<count($files);$i++) {
         $fs = filesize($files[$i]);
         $time = time() - filemtime($files[$i]);
         array_push($d,array($time,$fs,basename($files[$i]),1));
 }
 
-$files = glob($log_path.'*.mp4');
+$files = glob($cam_path.'*.mp4');
 for ($i=0;$i<count($files);$i++) {
         $fs = filesize($files[$i]);
         $time = time() - filemtime($files[$i]);

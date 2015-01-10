@@ -11,11 +11,11 @@ if ($f=='logs') {
 }
 
 if ($f=='cam') {
-	$mask = $log_path.'*.jpg';
+	$mask = $cam_path.'*.jpg';
 	array_map( 'unlink', glob($mask) );
-	$mask = $log_path.'*.h264';
+	$mask = $cam_path.'*.h264';
 	array_map( 'unlink', glob($mask) );
-	$mask = $log_path.'*.mp4';
+	$mask = $cam_path.'*.mp4';
 	array_map( 'unlink', glob($mask) );
 }
 header('Location: '.$_SERVER['HTTP_REFERER'].'#'.$_GET['hash']);

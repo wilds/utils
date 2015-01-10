@@ -37,5 +37,5 @@ function ws_send(t,v) {
         var arr = new Uint8Array(ab);
         ws.send(ab.buffer);
 */
-	ws.send([t,(v & 0xFF00) >> 8, v & 0x00FF]);
+	ws.send([0,t,(v & 0xFF00) >> 8, v & 0x00FF]);
 }

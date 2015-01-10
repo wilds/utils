@@ -5,7 +5,7 @@ session_start();
 ?>
 <html>
 <head>
-  <title>RPICopter</title>
+  <title>AvrMiniCopter</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="jquery/jquery.mobile-1.4.3.min.css" />
   <script src="jquery/jquery-1.11.1.min.js"></script>
@@ -32,6 +32,8 @@ session_start();
       <a data-ajax="false" href="#pid" data-transition="slide" class="ui-btn ui-corner-all">PIDs</a>
       <a data-ajax="false" href="#esc" data-transition="slide" class="ui-btn ui-corner-all">ESC</a>
       <a data-ajax="false" href="#other" data-transition="slide" class="ui-btn ui-corner-all">Other</a>
+      <a data-ajax="false" href="#logs" data-transition="slide" class="ui-btn ui-corner-all">Logs</a>
+      <a data-ajax="false" href="#camera" data-transition="slide" class="ui-btn ui-corner-all">Camera</a>
       <a data-ajax="false" href="wsdebug.php" data-transition="slide" class="ui-btn ui-corner-all">WebSock Debug</a>
       <a data-ajax="false" href="livechart.php" data-transition="slide" class="ui-btn ui-corner-all">Live Charts</a>
       <a data-ajax="false" href="wifi.php" data-transition="slide" class="ui-btn ui-corner-all">Wifi Settings</a>
@@ -50,6 +52,8 @@ readfile("/var/local/rpicopter.config");
 @include "pid.php";
 @include "esc.php";
 @include "other.php";
+@include "camera.php";
+@include "log.php";
 ?>
 </form>
 </body>
