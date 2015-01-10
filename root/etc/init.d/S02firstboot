@@ -20,7 +20,7 @@ if [ -f "/secondboot" ]; then
 	mkdir /rpicopter
 	mkdir /rpicopter/log
 	mkdir /rpicopter/cam
-	cp /etc/avrminicopter/* /rpicopter/
+#	cp /etc/avrminicopter/* /rpicopter/
 #	echo "/dev/mmcblk0p3       /rpicopter              ext2	async,rw,noauto         0      0" >> /etc/fstab
 	
 	echo "/dev/mmcblk0p3       /rpicopter              ext4	noatime,nodiratime,data=writeback         0      0" >> /etc/fstab

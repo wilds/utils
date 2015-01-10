@@ -29,7 +29,6 @@ install:
 		install -m 755 root/usr/local/bin/bt.sh $(DESTDIR)/usr/local/bin/bt.sh
 		install -m 755 root/usr/local/bin/btnetup.sh $(DESTDIR)/usr/local/bin/btnetup.sh
 		install -m 755 root/usr/local/bin/btnetdown.sh $(DESTDIR)/usr/local/bin/btnetdown.sh
-		install -m 755 root/usr/local/bin/avrconfig.sh $(DESTDIR)/usr/local/bin/avrconfig.sh
 		install -m 755 root/usr/local/bin/ps3controller.sh $(DESTDIR)/usr/local/bin/ps3controller.sh
 		install -m 755 root/usr/local/bin/avr.sh $(DESTDIR)/usr/local/bin/avr.sh
 		install -m 755 root/usr/local/bin/picsnap.sh $(DESTDIR)/usr/local/bin/picsnap.sh
