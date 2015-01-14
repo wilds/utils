@@ -1,7 +1,8 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', True);
-$f = '/etc/avrminicopter/rpicopter.config';
+@include "config.php";
+$f = $config_path.'rpicopter.config';
 $c = [];
 
 function csv_to_array($filename='', $delimiter=',')

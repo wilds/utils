@@ -1,7 +1,8 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', True);
-$f = '/etc/avrminicopter/ps3.config';
+@include "config.php";
+$f = $config_path.'ps3.config';
 $c = [];
 
 function csv_to_array($filename='', $delimiter=',')

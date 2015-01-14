@@ -100,7 +100,7 @@ for ($i=0;$i<count($c);$i++) {
 	} 
 }
 
-$handle = fopen("/etc/avrminicopter/rpicopter.config", "w");
+$handle = fopen($config_path."rpicopter.config", "w");
 for ($i=0;$i<count($c);$i++) {                    
     for ($j=0;$j<count($c[$i]);$j++)       
         fprintf($handle,"%s\t",$c[$i][$j]);
@@ -110,7 +110,7 @@ for ($i=0;$i<count($c);$i++) {
 fclose($handle); 
 
 
-shell_exec("killall avrconfig");
+shell_exec("/usr/local/bin/avrspi_cmd -t 0 -v 1");
 
 header('Location: '.$_SERVER['HTTP_REFERER'] . '#' . $_SESSION['hash']);
 ?>

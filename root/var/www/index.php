@@ -42,7 +42,7 @@ session_start();
 <h3>Config view</h3>
 <pre>
 <?php
-readfile("/etc/avrminicopter/rpicopter.config");
+readfile($config_path."rpicopter.config");
 ?>
 </pre>
 </div>

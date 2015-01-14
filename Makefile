@@ -21,6 +21,7 @@ install:
 		install -m 644 root/etc/bluetooth/main.conf $(DESTDIR)/etc/bluetooth/main.conf
 		install -m 644 root/etc/bluetooth/network.conf $(DESTDIR)/etc/bluetooth/network.conf
 		install -m 644 root/etc/bluetooth/pin $(DESTDIR)/etc/bluetooth/pin
+		install -m 755 root/etc/init.d/S01cleanup $(DESTDIR)/etc/init.d/S01cleanup
 		install -m 755 root/etc/init.d/S02firstboot $(DESTDIR)/etc/init.d/S02firstboot
 		install -m 755 root/etc/init.d/S11modules $(DESTDIR)/etc/init.d/S11modules
 		install -m 755 root/etc/init.d/S99avrminicopter $(DESTDIR)/etc/init.d/S99avrminicopter

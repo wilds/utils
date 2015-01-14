@@ -29,7 +29,7 @@ for ($i=0;$i<count($c);$i++) {
 	} 
 }
 
-$handle = fopen("/etc/avrminicopter/ps3.config", "w");
+$handle = fopen($config_path."ps3.config", "w");
 for ($i=0;$i<count($c);$i++) {                    
     for ($j=0;$j<count($c[$i]);$j++)       
         fprintf($handle,"%s\t",$c[$i][$j]);

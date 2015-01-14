@@ -48,7 +48,7 @@ session_start();
 <h3>Config view</h3>
 <pre>
 <?php
-readfile("/rpicopter/ps3.config");
+readfile($config_path."ps3.config");
 ?>
 </pre>
 </div>

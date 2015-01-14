@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+
+if [ "$1" == "stop"  ]; then
+
+sync;sync;sync;
+mount -r -o remount /
+sleep 1
+
+fi
+
+exit 0
+
