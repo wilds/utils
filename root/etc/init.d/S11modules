@@ -1,2 +1,21 @@
+#!/bin/sh
+
 find /sys -name modalias | xargs sort -u \
    | xargs modprobe -a 2> /dev/null
+
+
+##define config file
+#MCONFIG=/etc/modules.conf
+#
+##get all modules to load
+#MODULES=`find /sys -name modalias | xargs sort -u` 
+#
+#echo "" > /tmp/modules.log
+#
+#for module in $MODULES; do 
+#     cmd="s/^$module\ //p"
+#     opts=`sed -n "$cmd" /etc/modules.conf`
+#     echo "Found device: $module $opts" >> /tmp/modules
+#     modprobe -a $module $opts 
+#done
+
