@@ -2,7 +2,7 @@
 if [ "$1" == "start"  ]; then
 mount /rpicopter
 
-/usr/local/bin/wifi.sh
+/usr/local/bin/wifi.sh &
 /usr/local/bin/bt.sh
 /usr/local/bin/sixpair.sh
 

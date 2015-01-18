@@ -26,7 +26,10 @@ if [ -f "/secondboot" ]; then
 	echo "/dev/mmcblk0p3       /rpicopter              ext4	noatime,nodiratime,data=writeback         0      0" >> /etc/fstab
 	rm /var/run/messagebus.pid
 	echo "Second boot done!";
-	sync;sync;/sbin/reboot;
+	/bin/sync;bin/sync;bin/sync;
+	/bin/mount -r -o remount /
+	/bin/sleep 1
+	/sbin/reboot;
 fi
 
 if [ -f "/firstboot" ]; then

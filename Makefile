@@ -16,7 +16,6 @@ install:
 		install -m 644 root/etc/group $(DESTDIR)/etc/group
 		install -m 644 root/etc/exports $(DESTDIR)/etc/exports
 		install -m 644 root/etc/mdev.conf $(DESTDIR)/etc/mdev.conf
-		install -m 644 root/etc/modules.conf $(DESTDIR)/etc/modules.conf
 		install -m 644 root/etc/hostapd.conf $(DESTDIR)/etc/hostapd.conf
 		install -m 644 root/etc/wpa_supplicant.conf $(DESTDIR)/etc/wpa_supplicant.conf
 		install -m 644 root/etc/bluetooth/main.conf $(DESTDIR)/etc/bluetooth/main.conf
