@@ -91,13 +91,15 @@ $c[12][3] = $_POST['motor_pin_3'];
 
 $c[13][0] = $_POST['mpu_addr'];
 
+$c[14][0] = $_POST['reset_gpio'];
+
 for ($i=0;$i<count($c);$i++) {                    
     for ($j=0;$j<count($c[$i]);$j++)       
 	if (is_numeric($c[$i][$j])==FALSE) {
 		echo $i." ".$j." ".$c[$i][$j]."\n";
 		die("Variable incorrect. Will NOT save.");
 		exit(0);
-	} 
+	}
 }
 
 $handle = fopen($config_path."rpicopter.config", "w");
@@ -105,7 +107,7 @@ for ($i=0;$i<count($c);$i++) {
     for ($j=0;$j<count($c[$i]);$j++)       
         fprintf($handle,"%s\t",$c[$i][$j]);
     fprintf($handle,"\n");
-}                                   
+}
                                     
 fclose($handle); 
 
