@@ -47,6 +47,7 @@ $motor_pin = $c[11];
 
 $mpu_addr = $c[12][0];
 $mpu_pos = $c[12][1];
+$mpu_reset = $c[12][2];
 
 
 ?>

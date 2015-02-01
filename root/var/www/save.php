@@ -81,6 +81,7 @@ $c[11][3] = $_POST['motor_pin_3'];
 
 $c[12][0] = $_POST['mpu_addr'];
 $c[12][1] = $_POST['mpu_pos'];
+$c[12][2] = $_POST['mpu_reset'];
 
 for ($i=0;$i<count($c);$i++) {                    
     for ($j=0;$j<count($c[$i]);$j++)       
