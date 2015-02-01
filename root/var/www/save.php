@@ -74,22 +74,13 @@ $c[9][4] = $_POST['pid_accel_4'];
 $c[10][0] = $_POST['acro_p'];
 $c[10][1] = $_POST['baro_f'];
 
-$c[11][0] = $_POST['gyro_orient_0'];
-$c[11][1] = $_POST['gyro_orient_1'];
-$c[11][2] = $_POST['gyro_orient_2'];
-$c[11][3] = $_POST['gyro_orient_3'];
-$c[11][4] = $_POST['gyro_orient_4'];
-$c[11][5] = $_POST['gyro_orient_5'];
-$c[11][6] = $_POST['gyro_orient_6'];
-$c[11][7] = $_POST['gyro_orient_7'];
-$c[11][8] = $_POST['gyro_orient_8'];
+$c[11][0] = $_POST['motor_pin_0'];
+$c[11][1] = $_POST['motor_pin_1'];
+$c[11][2] = $_POST['motor_pin_2'];
+$c[11][3] = $_POST['motor_pin_3'];
 
-$c[12][0] = $_POST['motor_pin_0'];
-$c[12][1] = $_POST['motor_pin_1'];
-$c[12][2] = $_POST['motor_pin_2'];
-$c[12][3] = $_POST['motor_pin_3'];
-
-$c[13][0] = $_POST['mpu_addr'];
+$c[12][0] = $_POST['mpu_addr'];
+$c[12][1] = $_POST['mpu_pos'];
 
 for ($i=0;$i<count($c);$i++) {                    
     for ($j=0;$j<count($c[$i]);$j++)       

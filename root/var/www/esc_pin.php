@@ -26,34 +26,18 @@ $page_id='esc_pin';
 
 </div>
 <div data-role="collapsible">
-  <h3>MPU orientation matrix</h3>
+  <h3>MPU orientation</h3>
   <p>When pitching forwards the pitch quaternion should increase</p>
   <p>When rolling right the roll quaternion should increase</p>
   <p>When yawing right the yaw quaternion should decrease</p>
-  <p>To toggle pitch change the sign of 0,0 (i.e. from 1 to -1)</p>
-  <p>To toggle roll change sign of 1,1 (i.e. from 1 to -1)</p>
-  <p>This is a 3x3 matrix. The top-left item is identified as 0,0. Please refer to MPU6050/6150 driver source code.</p>
+  <p>If inverted is set to '1' the pitch and roll will toggle sign. Otherwise set it to 0.</p>
 <div class="ui-field-contain">
-  <label for="name">0,0:</label>
-  <input type="number" name="gyro_orient_0" id="gyro_orient_0" value="<?php echo $gyro_orient[0];?>"/>
-  <label for="name">0,1:</label>
-  <input type="number" name="gyro_orient_1" id="gyro_orient_1" value="<?php echo $gyro_orient[1];?>"/>
-  <label for="name">0,2:</label>
-  <input type="number" name="gyro_orient_2" id="gyro_orient_2" value="<?php echo $gyro_orient[2];?>"/>
-  <label for="name">1,0:</label>
-  <input type="number" name="gyro_orient_3" id="gyro_orient_3" value="<?php echo $gyro_orient[3];?>"/>
-  <label for="name">1,1:</label>
-  <input type="number" name="gyro_orient_4" id="gyro_orient_4" value="<?php echo $gyro_orient[4];?>"/>
-  <label for="name">1,2:</label>
-  <input type="number" name="gyro_orient_5" id="gyro_orient_5" value="<?php echo $gyro_orient[5];?>"/>
-  <label for="name">2,0:</label>
-  <input type="number" name="gyro_orient_6" id="gyro_orient_6" value="<?php echo $gyro_orient[6];?>"/>
-  <label for="name">2,1:</label>
-  <input type="number" name="gyro_orient_7" id="gyro_orient_7" value="<?php echo $gyro_orient[7];?>"/>
-  <label for="name">2,2:</label>
-  <input type="number" name="gyro_orient_8" id="gyro_orient_8" value="<?php echo $gyro_orient[8];?>"/>
-</div>
-</div>
+
+<label for="mpu_pos">Inverted:</label>
+<input type="number" name="mpu_pos" id="mpu_pos" value="<?php echo $mpu_pos;?>"/>
+
+    </div>
+    </div>
 <input type="submit" value="Save"/>
     </div>
 
