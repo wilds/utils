@@ -49,4 +49,6 @@ $motor_pin = $c[12];
 
 $mpu_addr = $c[13][0];
 
+$reset_gpio = $c[14][0];
+
 ?>
